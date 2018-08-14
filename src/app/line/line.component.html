@@ -1,0 +1,25 @@
+<mat-toolbar>
+    <span>{{lineName}}</span>
+</mat-toolbar>
+
+<div class="line-content">
+    <div class="row">
+        <div>
+            <h2>Batch Summary</h2>
+            <div class="chart">
+                <donut [data]="batchSummaryData"></donut>
+            </div>
+        </div>
+        <div class="row-spacer"></div>
+        <mat-card class="line-form">
+            <div [formGroup]="lineForm">
+                <mat-form-field class="break">
+                    <input matInput formControlName="searchText" placeholder="{{labels.search}}">
+                </mat-form-field>
+            </div>
+            <ul>
+                <li *ngFor="let product of filteredProducts">{{product.name}}</li>
+            </ul>
+        </mat-card>
+    </div>
+</div>

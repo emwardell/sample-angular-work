@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, Input } from '@angular/core';
 import Chart from 'chart.js';
 
-import { ChartData } from './chart-data.model';
+import { ChartData } from '../model';
 
 @Component({
     selector: 'donut',
